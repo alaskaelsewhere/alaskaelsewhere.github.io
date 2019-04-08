@@ -1,0 +1,13 @@
+.c-dn{display: none !important;}
+.c-di{display: inline !important;}
+.c-dib{display: inline-block !important;}
+.c-db{display: block !important;}
+
+@each $display in map-keys($breakpoints){
+	@include mediaquery($display){
+		.c-dn-#{$display}{display: none !important;}
+		.c-di-#{$display}{display: inline !important;}
+		.c-dib-#{$display}{display: inline-block !important;}
+		.c-db-#{$display}{display: block !important;}
+	}
+}

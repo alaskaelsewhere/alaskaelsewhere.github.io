@@ -1,0 +1,50 @@
+// 基本ベーススタイル
+// 基本的にclass属性は使用不可
+
+// webフォントのエイリアス設定
+
+body{	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+//`padding`と`border`を`width`に含める。
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// フォントサイズの基準を10pxに指定。
+
+$root-font-size: 62.5%;
+
+:root {
+	font-size: $root-font-size;
+}
+
+//フルードイメージ。
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+//IEでSVGがフルードイメージにならない不具合があるため、属性値が`.svg`で終わる要素に適応。
+
+[src$=".svg"], [data$=".svg"] {
+  width: 100%;
+}
+
+//斜体のリセット
+i, cite, em, address, dfn {
+  font-style: normal;
+}
+
+//計測タグの余計な高さが出る場合の非表示設定
+#tag{
+	display: none !important;
+}

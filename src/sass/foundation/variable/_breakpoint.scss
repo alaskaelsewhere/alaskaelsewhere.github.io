@@ -1,0 +1,14 @@
+// ブレイクポイントは大京使用のものに変更しています。
+// @media print, screen and (min-width: 801px) { /*{overTB}*/}
+// @media print, screen and (min-width: 1281px) { /*{overPC}*/}
+// @media screen and (max-width: 1280px) { /*{belowTB}*/}
+// @media screen and (min-width: 801px) and (max-width: 1280px) { /*{TB}*/}
+// @media screen and (max-width: 800px) { /*{SP}*/}
+// @media screen and (max-width: 480px) { /*{SPs}*/}
+
+$breakpoints: (
+    'sm': 'screen and (min-width: 480px)',
+    'md': 'screen and (min-width: 800px)',
+    'lg': 'screen and (min-width: 801px)',
+    'xl': 'screen and (min-width: 1280px)',
+) !default;

@@ -1,0 +1,25 @@
+.p-breadcrumb{
+	border-top: 1px solid $_color-sub;
+	border-bottom: 1px solid $_color-sub;
+	padding: 5px 30px;
+	font-size: 0;
+	text-align: right;
+	li{
+		@include fontsize(10,12,12);
+		display: inline-block;
+		color: $_color-main__text;
+		a{
+			color: $_color-link;
+			text-decoration: none;
+		}
+		&:after{
+			content: '>';
+			display: inline-block;
+			padding: 0 6px;
+		}
+		&:last-child:after{
+			content: '';
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,109 @@
+/*	=============================================================================
+	#Breakpoint
+	========================================================================== */
+
+@mixin mediaquery($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media #{inspect(map-get($breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+		+"Please make sure it is defined in `$breakpoints` map.";
+	}
+}
+
+//sample code
+//
+//.foo {
+//	color: red;
+//	@include mediaquery(sm) {
+//		color: blue;
+//	}
+//}
+
+/*	=============================================================================
+	buttonreseat
+	========================================================================== */
+@mixin buttonreseat {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+	text-decoration: none;
+}
+
+/*	=============================================================================
+	#fontsize
+	========================================================================== */
+
+@mixin fontsize($sp-font-size, $tb-font-size, $pc-font-size) {
+
+	font-size: #{$sp-font-size / 10 }rem;
+
+	@include mediaquery(md) {
+		font-size: #{$tb-font-size / 10 }rem;
+	}
+
+	@include mediaquery(xl) {
+		font-size: #{$pc-font-size / 10 }rem;
+	}
+}
+
+
+/*	=============================================================================
+	#gradient
+	========================================================================== */
+
+
+@mixin gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+
+	@if $orientation==vertical {
+		// vertical
+		background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start-color), color-stop(100%, $end-color));
+		background: -webkit-linear-gradient(top, $start-color 0%, $end-color 100%);
+		background: -o-linear-gradient(top, $start-color 0%, $end-color 100%);
+		background: -ms-linear-gradient(top, $start-color 0%, $end-color 100%);
+		background: linear-gradient(to bottom, $start-color 0%, $end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0);
+	}
+
+	@else if $orientation==horizontal {
+		// horizontal
+		background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%, $start-color), color-stop(100%, $end-color));
+		background: -webkit-linear-gradient(left, $start-color 0%, $end-color 100%);
+		background: -o-linear-gradient(left, $start-color 0%, $end-color 100%);
+		background: -ms-linear-gradient(left, $start-color 0%, $end-color 100%);
+		background: linear-gradient(to right, $start-color 0%, $end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1);
+	}
+
+	@else if $orientation==radical {
+		// radial
+		background: -moz-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $start-color), color-stop(100%, $end-color));
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+		background: -o-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+		background: -ms-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+		background: radial-gradient(ellipse at center, $start-color 0%, $end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1);
+	}
+
+	@else if $orientation==oblique {
+		background-image: linear-gradient(-45deg, $start-color 25%, $end-color 25%, $end-color 50%, $start-color 50%, $start-color 75%, $end-color 75%, $end-color);
+		background-image: -webkit-linear-gradient(-45deg, $start-color 25%, $end-color 25%, $end-color 50%, $start-color 50%, $start-color 75%, $end-color 75%, $end-color);
+		background-image: -moz-linear-gradient(-45deg, $start-color 25%, $end-color 25%, $end-color 50%, $start-color 50%, $start-color 75%, $end-color 75%, $end-color);
+		background-image: -ms-linear-gradient(-45deg, $start-color 25%, $end-color 25%, $end-color 50%, $start-color 50%, $start-color 75%, $end-color 75%, $end-color);
+		-webkit-background-size: 7px 7px;
+		-moz-background-size: 7px 7px;
+		-ms-background-size: 7px 7px;
+		background-size: 7px 7px;
+	}
+}

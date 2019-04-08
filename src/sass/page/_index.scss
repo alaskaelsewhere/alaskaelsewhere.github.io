@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+
+.index{
+  position: relative;
+  width: calc(100vw - 260px);
+  height: 100vh;
+  &--ttl{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    font-weight: 100;
+
+  }
+}

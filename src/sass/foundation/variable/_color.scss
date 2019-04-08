@@ -1,0 +1,26 @@
+//base color
+$_color-black: #000 !default;
+$_color-white: #fff !default;
+
+
+// main color
+$_color-main: $_color-white;
+$_color-main__text: $_color-black;
+
+// sub color
+$_color-sub: rgba(130,130,130,0.5) !default;
+$_color-sub__text: rgba(80,80,80,1.0) !default;
+
+// caption color
+$_color-caption: rgba(102, 102, 102, 1.0) !default;
+$_color-figure: rgba(0,0,0,0.8) !default;
+$_color-figure__text: rgba(255,255,255,1.0) !default;
+
+// link color
+$_color-link: #2b70ba !default;
+$_color-link--visited: null !default;
+$_color-link--hover: lighten($_color-link, 15%) !default;
+
+// component color
+$_color-ui-border: #ddd !default;
+$_color-ui-bg: #fff !default;

@@ -1,0 +1,18 @@
+<%
+var data = {
+	cd: './',
+	pagetype: 'page',
+	basename: 'index',
+	mainname: 'index',
+	title: 'Logo Library',
+	desc: '',
+	key: ''
+};
+%>
+<%- include(data.cd + 'include/_head', {data:data}) %>
+<%- include(data.cd + 'include/_header', {data:data}) %>
+
+<main class="<%- data.mainname %>">
+	<h2 class="index--ttl">everything.</h2>
+</main>
+<%- include(data.cd + 'include/_footer', {data:data}) %>

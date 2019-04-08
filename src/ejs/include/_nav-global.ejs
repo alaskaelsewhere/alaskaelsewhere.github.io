@@ -1,0 +1,53 @@
+<% var currentClass = 'nav-global__element--current'; -%>
+<nav class="nav-global">
+  <div class="nav-global__wrapper">
+    <ul class="nav-global__inner">
+      <li class="nav-global__element <%- data.basename == 'top' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>">top</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'access' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>media.html">media</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'design' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>blog/">blog</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'plan' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>brand.html">brand</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'result' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>service/">service</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'top' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>learning/">learning</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'access' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>artist/">artist</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'design' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>designer/">designer</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'plan' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>photographer/">photographer</a>
+      </li>
+    </ul>
+
+    <ul class="nav-global__inner">
+      <li class="nav-global__element--disable <%- data.basename == 'top' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>">portfolio</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'access' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>media/">RSS</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'design' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>blog/">twitter</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'plan' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>brand/">tumblr</a>
+      </li>
+      <li class="nav-global__element <%- data.basename == 'result' ? currentClass : '' %> nav-global__element">
+        <a class="nav-global__element--link" href="<%- data.cd %>service/">instagram</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>

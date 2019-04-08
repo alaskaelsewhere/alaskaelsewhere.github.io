@@ -1,0 +1,31 @@
+.index,
+.media,
+.brand {
+  font-family: $_font-en_serif;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  &--ttl {
+    @include fontsize(24, 24, 24);
+    font-weight: lighter;
+  }
+}
+
+.list-wrapper {
+  position: absolute;
+  left: 5%;
+  width: 100%;
+  top: 150px;
+
+  &__list {
+    list-style: none;
+    color: $_color-black;
+    margin: 20px auto;
+    @include fontsize(12, 12, 12);
+
+    &--link {
+      text-decoration: none;
+
+    }
+  }
+}

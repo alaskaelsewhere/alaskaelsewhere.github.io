@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/*	=============================================================================
+	Name: Estate Template
+	Description: Evrything
+	Version: 1.0
+	========================================================================== */
+
+/*	=============================================================================
+	#Foundation
+	========================================================================== */
+
+// リセットは大京提供のものを使用
+//
+// base...ベース設定用ファイル
+
+@import "foundation/base";
+
+
+// breakpoint...メディアクエリで使用するブレイクポイントの設定 基準値はbootsrap v4.1.1の指定
+// color...サイトのテーマカラー設定
+// typography...サイトのテーマフォント設定
+
+@import "foundation/variable/breakpoint";
+@import "foundation/variable/color";
+@import "foundation/variable/typography";
+
+
+// mixin...メディアクエリ、フォントサイズ、グラデーションのmixin
+// function...function設定
+
+@import "foundation/mixin/mixin";
+@import "foundation/function/function";
+
+@import "layout/header";
+@import "layout/nav-global";
+@import "layout/main";
+
+// embed...アスペクト比の固定してレスポンシブ対応させる場合に使用
+// image...画像とそれに付随するキャプション
+// display...要素の表示・非表示
+// caption...注釈要素に使うスタイル
+
+@import "object/component/embed";
+@import "object/component/image";
+@import "object/component/display";
+@import "object/component/caption";
+@import "object/component/common";
+
+/*	-----------------------------------------------------------------------------
+	#Project
+	-------------------------------------------------------------------------- */
+
+// breadcrumb...パンくずリスト
+@import "object/project/breadcrumb";
+
+/*	-----------------------------------------------------------------------------
+	#Utility
+	-------------------------------------------------------------------------- */
+
+// component内にある要素の属性を上書きする場合、こちらのディレクトリに内容を記述してください。
+@import "object/utility/utility";
+
+/*	-----------------------------------------------------------------------------
+	#Library
+	-------------------------------------------------------------------------- */
+	
+// ライブラリ設置する場合こちらのディレクトリに格納してください。
+// @import "lib/library";
+
+/*	=============================================================================
+	#Page
+	========================================================================== */
+
+// index...トップページの個別スタイル
+@import "page/index";
